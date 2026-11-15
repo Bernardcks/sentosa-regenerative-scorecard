@@ -38,7 +38,7 @@
       if (it.priority === 'Supplementary' && v >= 4) bonus += 0.15;
     });
     const base = s / w, share = stdOk / std;
-    let score = base + Math.min(bonus, 0.5);
+    let score = Math.min(5, base + Math.min(bonus, 0.5));
     if (share < 0.7) score = Math.min(score, 2);
     if (coreFail.length) score = Math.min(score, 1);
     return { base, score, coreFail, share };
@@ -260,6 +260,97 @@
     </div>`;
   }
 
+  /* ---------- Living Island ---------- */
+  const SIGNATURE = {
+    se: ['SE-14', 'SE-11', 'SE-19', 'SE-17'],
+    nc: ['NC-07', 'NC-09', 'NC-15', 'NC-03'],
+    bs: ['BS-12', 'BS-08', 'BS-02', 'BS-17'],
+    ak: ['AK-10', 'AK-13', 'AK-18', 'AK-19']
+  };
+  const DAY = [
+    ['gateway', 'Arrive without a car', 'A People Mover that uses renewable electricity brings you across. Your ticket shows the carbon that your trip saved.', ['BS-18', 'BS-08']],
+    ['imbiah', 'Walk the forest corridor', 'Native trees connect Mount Imbiah to Mount Serapong. A guide from a nature group shows you the species that came back.', ['BS-01', 'BS-02']],
+    ['siloso', 'Help the reef', 'At the shore, you plant a coral piece or count seagrass with a scientist. Your work goes into the island data.', ['BS-03', 'BS-04']],
+    ['brani-village', 'Hear the first stories', 'On Brani, descendants of the island villages tell their stories and teach their crafts. They own the programme and they earn from it.', ['AK-13', 'SE-17']],
+    ['pasar', 'Eat from the island', 'Dinner is at Pasar Brani. Local hawkers cook, the edible garden adds fresh herbs, and nothing goes into a waste bin.', ['AK-04', 'BS-20']],
+    ['tanjong', 'Leave it better', 'You make one pledge before you go. Three months later, the island asks how it went and shows you what your visit paid for.', ['AK-18', 'NC-15']]
+  ];
+
+  function level5(it) {
+    const line = (it.tiers || '').split('\n').find((l) => l.trim().startsWith('5:'));
+    return line ? line.split(':')[1].trim() : '';
+  }
+
+  function renderLiving() {
+    const plan = (core, std, sup) => {
+      const o = {};
+      Object.values(allItems).forEach((it) => { o[it.code] = { Core: core, Standard: std, Supplementary: sup }[it.priority]; });
+      return o;
+    };
+    const steps = [
+      { year: 'Today', name: 'Conventional', text: 'The island obeys the standard. Two gates keep the score low.', over: {} },
+      { year: 'By 2028', name: 'Open the gates', text: 'Each item gets to level 2. Waste, clean energy, public trust and the Core stakeholders come first.', over: plan(2, 2, 2) },
+      { year: 'By 2030', name: 'Sustainable', text: 'Each item gets to level 3. The island causes no net harm. RWS 2.0 opens with absolute targets.', over: plan(3, 3, 3) },
+      { year: 'By 2035', name: 'Restorative', text: 'Each item gets to level 4. Brani opens with measured lease conditions. Habitat and reef increase each year.', over: plan(4, 4, 4) },
+      { year: 'By 2045', name: 'The Living Island', text: 'Each Core item gets to level 5. The island gives back more than it takes.', over: plan(5, 4, 4) }
+    ].map((s) => Object.assign(s, { score: simFinal(s.over), cats: SC.categories.map((c) => simCategory(c, s.over).score) }));
+    const goal = steps[steps.length - 1];
+    const tier5 = SC.tiers[4];
+
+    $('#living').innerHTML = `
+      <div class="card living-hero">
+        <div>
+          <span class="tag">The vision</span>
+          <h1>Sentosa, the Living Island</h1>
+          <p class="lead">A living island gives back more than it takes. Each visit makes the forest larger, the sea cleaner and the community stronger. On our scorecard, this is the Regenerative stage: a final score of 4.50 or more.</p>
+          <div class="shift">
+            <div class="st-${stage(SC.final.score)}"><small>Sentosa today</small><span class="num">${f2(SC.final.score)}</span><em>${STAGES[stage(SC.final.score)]}</em></div>
+            <span class="arrow" aria-hidden="true">→</span>
+            <div class="st-${stage(goal.score)}"><small>The Living Island</small><span class="num">${f2(goal.score)}</span><em>${STAGES[stage(goal.score)]}</em></div>
+          </div>
+        </div>
+        ${figure('aerial', 'Sentosa island from the air')}
+      </div>
+
+      <div class="section-head"><h2>The path to a living island</h2><p>We calculated each score with the scorecard rules. The dates are our proposal. They follow the 20-year master plan.</p></div>
+      <div class="path">
+        ${steps.map((s) => `<div class="card path-step st-${stage(s.score)}">
+          <span class="year">${s.year}</span>
+          <span class="num">${f2(s.score)}</span>
+          ${chip(s.score)}
+          <h3>${s.name}</h3>
+          <p>${s.text}</p>
+          <div class="mini">${s.cats.map((v, i) => `<span title="${CATS[i]}"><i style="height:${v * 20}%"></i></span>`).join('')}</div>
+        </div>`).join('')}
+      </div>
+      <p class="note">The small bars show the four categories in order: Stakeholder Engagement, No Compromise, Baseline Sustainability and Additional KPIs. The maximum score is 5.00. That needs level 5 for each Core and Standard item.</p>
+
+      <div class="section-head"><h2>A day on the Living Island</h2><p>This is what a visitor does when each part of the scorecard is at the Regenerative level.</p></div>
+      <div class="grid days">
+        ${DAY.map((d, i) => `<article class="card day">
+          <img src="assets/img/${d[0]}.jpg" alt="" loading="lazy">
+          <div><span class="tag">Step ${i + 1}</span><h3>${d[1]}</h3><p>${d[2]}</p>${codes(d[3])}</div>
+        </article>`).join('')}
+      </div>
+
+      <div class="section-head"><h2>What must be true</h2><p>These are the targets for level 5 in the scorecard. We show four important items for each category. The full list is in the Scorecard tab.</p></div>
+      ${SC.categories.map((c) => `<div class="card" style="margin-bottom:14px"><h3>${c.name}</h3>
+        <div class="table-scroll"><table class="ev-table"><thead><tr><th>Item</th><th>Today</th><th>Living Island target</th><th>What it looks like</th></tr></thead><tbody>
+        ${SIGNATURE[c.id].map((code) => allItems[code]).filter(Boolean).map((it) => `<tr>
+          <td><button class="code" data-code="${it.code}">${it.code}</button> ${esc(it.name)}<small class="src">${esc(it.kpi)}</small></td>
+          <td><span class="num">${esc(it.metric)}</span> <span class="pill st-${stage(it.score)}">${f1(it.score)}</span></td>
+          <td class="num">${esc(level5(it))}</td>
+          <td>${esc(it.levels[4])}</td></tr>`).join('')}
+        </tbody></table></div></div>`).join('')}
+
+      <div class="section-head"><h2>The island cannot do it alone</h2><p>A high score is not sufficient. The Regenerative tier also needs the businesses on the island to take part.</p></div>
+      <div class="grid g2">
+        <div class="card"><h3>Tier 5 needs</h3><ul><li>A final score of ${tier5.min.toFixed(1)} or more.</li><li>${esc(tier5.req)}.</li><li>Each lower tier must be complete.</li></ul></div>
+        <div class="card"><h3>Today</h3><ul>${SC.tierInputs.filter((t) => /level 5|level 4|footprint/.test(t.input)).map((t) => `<li>${esc(t.input)}: <strong>${t.share == null ? t.value : Math.round(t.share * 100) + '%'}</strong></li>`).join('')}</ul>
+          <p>Thus the lease and bid conditions for Brani and RWS 2.0 are the first step. See the <a href="#brani">Brani ideas</a>.</p></div>
+      </div>`;
+  }
+
   function renderSources() {
     $('#sources').innerHTML = `
       <h1>Sources</h1>
@@ -425,7 +516,7 @@
   }
 
   /* ---------- Shell ---------- */
-  const TABS = ['map', 'scorecard', 'score', 'brani', 'sources'];
+  const TABS = ['map', 'scorecard', 'score', 'brani', 'living', 'sources'];
   function route() {
     const id = TABS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'map';
     TABS.forEach((t) => { document.getElementById(t).hidden = t !== id; });
@@ -444,7 +535,7 @@
     else if (t.dataset.area) { location.hash = '#map'; setTimeout(() => selectArea(t.dataset.area, true), 80); }
   });
 
-  renderMap(); renderScorecard(); renderScore(); renderBrani(); renderSources();
+  renderMap(); renderScorecard(); renderScore(); renderBrani(); renderLiving(); renderSources();
   $('#credits').innerHTML = Object.values(CREDITS).map((c) =>
     `<li><a href="${esc(c.page)}" target="_blank" rel="noopener">${esc(c.title)}</a> · ${esc(c.author)} · ${esc(c.license)}</li>`).join('');
   $('#site-url').textContent = location.origin + location.pathname;

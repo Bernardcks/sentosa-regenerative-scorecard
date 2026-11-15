@@ -271,6 +271,25 @@ td .codes { display: inline-flex; margin-left: 6px; vertical-align: middle; }
 .risk { background: var(--sea-soft); border-radius: 12px; padding: 10px 14px; font-size: .9rem; }
 .note { background: var(--sand); border-radius: 12px; padding: 12px 16px; font-size: .9rem; margin-top: 14px; }
 
+/* Living Island */
+.living-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; padding: 0; overflow: hidden; }
+.living-hero > div { padding: 28px; }
+.living-hero figure { margin: 0; display: grid; grid-template-rows: 1fr auto; }
+.living-hero img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; }
+.tag { font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--orange); }
+.path { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.path-step { background: color-mix(in srgb, var(--c) 10%, #fff); display: grid; gap: 6px; align-content: start; justify-items: start; }
+.path-step .year { font-family: Montserrat, sans-serif; font-weight: 700; font-size: .8rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .05em; }
+.path-step .num { font-size: 2.4rem; line-height: 1; color: color-mix(in srgb, var(--c) 72%, #000); }
+.path-step p { font-size: .88rem; margin: 0; }
+.mini { display: flex; gap: 5px; align-items: flex-end; height: 44px; margin-top: 6px; }
+.mini span { width: 14px; height: 100%; background: #fff; border-radius: 4px; display: flex; align-items: flex-end; overflow: hidden; }
+.mini i { width: 100%; background: var(--c); border-radius: 4px; }
+.days { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.day { padding: 0; overflow: hidden; }
+.day img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.day > div { padding: 14px 18px 18px; }
+
 /* Footer */
 .foot { background: var(--blue); color: #fff; padding: 28px 0; margin-top: 20px; }
 .foot-in { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; }
@@ -283,7 +302,8 @@ td .codes { display: inline-flex; margin-left: 6px; vertical-align: middle; }
 .fine ul { columns: 2; column-gap: 24px; margin-top: 8px; }
 
 @media (max-width: 980px) {
-  .map-layout, .hero, .brani-hero, .proposal, .foot-in, .total-effect { grid-template-columns: minmax(0, 1fr); }
+  .path, .days { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .map-layout, .hero, .brani-hero, .proposal, .foot-in, .total-effect, .living-hero { grid-template-columns: minmax(0, 1fr); }
   .shift { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
   .panel { position: static; max-height: none; }
   .ladder { grid-template-columns: 1fr; }
