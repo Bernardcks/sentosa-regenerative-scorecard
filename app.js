@@ -26,6 +26,49 @@
     ? `<button class="code" data-code="${c}" title="${esc(allItems[c].name)}">${c}</button>`
     : `<span class="code">${c}</span>`).join('')}</div>`;
 
+  const PW = { Core: 3, Standard: 2, Supplementary: 0 };
+  function simCategory(c, over) {
+    let w = 0, s = 0, std = 0, stdOk = 0, bonus = 0;
+    const coreFail = [];
+    c.items.forEach((it) => {
+      const v = over && over[it.code] != null ? Math.max(over[it.code], it.score) : it.score;
+      w += PW[it.priority]; s += PW[it.priority] * v;
+      if (it.priority === 'Core' && v < 2) coreFail.push(it);
+      if (it.priority === 'Standard') { std += 1; if (v >= 2) stdOk += 1; }
+      if (it.priority === 'Supplementary' && v >= 4) bonus += 0.15;
+    });
+    const base = s / w, share = stdOk / std;
+    let score = base + Math.min(bonus, 0.5);
+    if (share < 0.7) score = Math.min(score, 2);
+    if (coreFail.length) score = Math.min(score, 1);
+    return { base, score, coreFail, share };
+  }
+  // The No Compromise export is not complete, thus we keep the workbook score for it.
+  const simFinal = (over) => SC.categories.reduce((sum, c) =>
+    sum + (c.id === 'nc' ? c.score : simCategory(c, over).score) * c.weight, 0);
+  const catOf = (code) => SC.categories.find((c) => c.items.some((it) => it.code === code));
+
+  function nextLevel(it) {
+    const target = Math.min(5, Math.max(2, Math.floor(it.score) + 1));
+    const line = (it.tiers || '').split('\n').find((l) => l.trim().startsWith(target + ':'));
+    if (!line) return '';
+    const rel = it.relationship ? `. Relationship now: ${it.relationship}` : '';
+    return `Level ${target}: ${line.split(':')[1].trim()}${rel}`;
+  }
+  function evidence(arr, compact) {
+    const items = arr.map((c) => allItems[c]).filter(Boolean);
+    if (compact) {
+      return `<div class="ev-list">${items.map((it) => `<button class="ev st-${stage(it.score)}" data-code="${it.code}">
+        <span class="code">${it.code}</span><span>${esc(it.name)}<small>${esc(it.metric)} now${nextLevel(it) ? ' · ' + esc(nextLevel(it)) : ''}</small></span>
+        <span class="pill">${f1(it.score)}</span></button>`).join('')}</div>`;
+    }
+    return `<div class="table-scroll"><table class="ev-table"><thead><tr><th>Item</th><th>Metric (KPI)</th><th>Value now</th><th>Next level needs</th><th>Score</th></tr></thead><tbody>
+      ${items.map((it) => `<tr><td><button class="code" data-code="${it.code}">${it.code}</button> ${esc(it.name)} <span class="prio ${it.priority}">${it.priority}</span></td>
+        <td>${esc(it.kpi)}<small class="src">${esc(it.source)}</small></td><td class="num">${esc(it.metric)}</td><td>${esc(nextLevel(it))}</td>
+        <td><span class="pill st-${stage(it.score)}">${f1(it.score)}</span></td></tr>`).join('')}
+    </tbody></table></div>`;
+  }
+
   function figure(key, alt) {
     const c = CREDITS[key];
     return `<figure><img src="assets/img/${key}.jpg" alt="${esc(alt)}" loading="lazy">
@@ -117,8 +160,8 @@
         </div>
         <h4>Score by category (now → after)</h4>
         ${catBars(a.now, a.after)}
-        <h4>Related scorecard items</h4>
-        ${codes(a.links)}
+        <h4>Why this score: evidence from the scorecard</h4>
+        ${evidence(a.links, true)}
       </div>`;
     panel.scrollTop = 0;
   }
@@ -137,7 +180,7 @@
       ? ['1 Informed', '2 Committed', '3 Certified', '4 Collaborating', '5 Regenerative partner']
       : STAGES.map((s, i) => `${i + 1} ${s}`);
     const rows = [
-      ['KPI', it.kpi], ['Latest value', it.metric],
+      ['KPI', it.kpi], ['Latest value', it.metric], ['Thresholds', (it.tiers || '').replace(/\n/g, ' · ')],
       kind === 'stakeholder' ? ['Group', it.group] : ['Assessor level', it.qualitative],
       kind === 'stakeholder' ? ['Relationship', `${it.relationship || ''} · outlook: ${it.outlook || ''}`] : null,
       kind === 'stakeholder' ? ['Role', it.role] : null,
@@ -181,15 +224,51 @@
           ${c.items.map((it) => itemHtml(it, c.kind)).join('')}
         </details>`).join('')}
 
+      <div class="section-head"><h2>Findings and how to improve the score</h2><p>Each finding shows the items that cause it, the metric, the value now and the value that the next level needs. The score effect uses the scorecard rules.</p></div>
+      ${findingsHtml()}
+
       <div class="section-head"><h2>Priorities</h2></div>
       <div class="grid g3">
         <div class="card"><h3><span class="prio Core">Core</span> Mandatory</h3><p>Weight 3. Each Core item must be at level 2 or above. If not, the category score stops at 1.</p></div>
         <div class="card"><h3><span class="prio">Standard</span> Expected</h3><p>Weight 2. A minimum of 70% of Standard items must be at level 2 or above. If not, the category score stops at 2.</p></div>
         <div class="card"><h3><span class="prio">Supplementary</span> Bonus</h3><p>Weight 0. A Supplementary item at level 4 or above adds 0.15 points. A weak item does not decrease the score.</p></div>
-      </div>
+      </div>`;
+  }
 
-      <div class="section-head"><h2>Sources</h2></div>
-      <div class="card table-scroll"><table><thead><tr><th>Source</th><th>Used for</th></tr></thead><tbody>
+  function findingsHtml() {
+    const fin = SC.final.score, all = {};
+    const cards = window.FINDINGS.map((f, i) => {
+      let effect = '';
+      if (f.whatIf) {
+        Object.assign(all, f.whatIf);
+        const after = simFinal(f.whatIf), c = catOf(Object.keys(f.whatIf)[0]);
+        const cs = simCategory(c, f.whatIf);
+        effect = after - fin > 0.004
+          ? `<p class="effect"><strong>Score effect:</strong> if these items get to level 2, ${c.name} goes from ${f2(c.score)} to ${f2(cs.score)}. The final score goes from ${f2(fin)} to <strong>${f2(after)}</strong>.</p>`
+          : `<p class="effect none"><strong>Score effect:</strong> no change if SDC does only this. ${cs.coreFail.length ? `The Core gate of ${c.name} stays closed because of ${cs.coreFail.map((x) => x.code).join(', ')}.` : `The Standard gate of ${c.name} stays closed.`} Do it together with the other findings.</p>`;
+      }
+      return `<article class="card finding">
+        <h3><span class="n">${i + 1}</span>${esc(f.title)}</h3>
+        <p>${esc(f.why)}</p>
+        ${evidence(f.codes)}
+        <div class="improve"><h3>${f.whatIf ? 'How to improve' : 'What to do'}</h3>${list(f.actions)}</div>
+        ${effect}
+      </article>`;
+    }).join('');
+    const total = simFinal(all);
+    return `${cards}<div class="card total-effect st-${stage(total)}">
+      <div><h3>If SDC does all of these</h3><p>All the items in findings 1 to 6 get to level 2. This is the minimum, not the target. No Compromise stays at its score from the workbook.</p></div>
+      <div class="shift"><div class="st-${stage(fin)}"><small>Final score now</small><span class="num">${f2(fin)}</span><em>${STAGES[stage(fin)]}</em></div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="st-${stage(total)}"><small>After</small><span class="num">${f2(total)}</span><em>${STAGES[stage(total)]}</em></div></div>
+    </div>`;
+  }
+
+  function renderSources() {
+    $('#sources').innerHTML = `
+      <h1>Sources</h1>
+      <p class="lead">These are the documents and data that we used for the scorecard. In the scorecard, "Public" is a published figure, "Team" is our research, and "Assumption" is our estimate.</p>
+      <div class="card table-scroll" style="margin-top:16px"><table><thead><tr><th>Source</th><th>Used for</th></tr></thead><tbody>
         ${SC.sources.map((s) => `<tr><td>${/^https?:\/\//.test(s.link) ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</td><td>${esc(s.use)}</td></tr>`).join('')}
       </tbody></table></div>`;
   }
@@ -216,7 +295,7 @@
     const counts = SC.dashboard.reduce((acc, d) => acc.map((v, i) => v + d.counts[i]), [0, 0, 0, 0, 0]);
     const sum = counts.reduce((a, b) => a + b, 0);
     $('#score').innerHTML = `
-      <h1>Our estimated score for Sentosa</h1>
+      <h1>Sentosa Score: data dashboard</h1>
       <p class="lead">This is the baseline for ${SC.final.year}. We used public data and our research. Where no data was available, we made an estimate and wrote the reason in the scorecard.</p>
 
       <div class="hero">
@@ -258,10 +337,19 @@
         }).join('')}
       </div>
 
-      <div class="section-head"><h2>General insights</h2><p>We wrote these in Simplified Technical English (ASD-STE100): short sentences, one meaning for each word.</p></div>
-      <div class="card insights">
-        ${window.INSIGHTS.map((n) => `<div class="insight"><div><h3>${esc(n.title)}</h3><p>${esc(n.body)}</p></div></div>`).join('')}
-      </div>
+      <div class="section-head"><h2>Gates</h2><p>A gate limits the category score. The table shows the items that close each gate.</p></div>
+      <div class="card table-scroll"><table><thead><tr><th>Category</th><th>Score before gates</th><th>Core gate (each Core item at level 2 or above)</th><th>Standard gate (70% at level 2 or above)</th><th>Score</th></tr></thead><tbody>
+        ${SC.categories.map((c) => {
+          const s = simCategory(c), calc = c.id !== 'nc';
+          return `<tr><td><strong>${c.name}</strong></td><td class="num">${f2(c.base)}</td>
+            <td>${calc && s.coreFail.length ? `<span class="gate fail">Fail</span> ${codes(s.coreFail.map((x) => x.code))}` : `<span class="gate ${/Fail/.test(c.coreGate) ? 'fail' : 'pass'}">${esc(c.coreGate)}</span>`}</td>
+            <td><span class="gate ${/Fail/.test(c.standardGate) ? 'fail' : 'pass'}">${/Fail/.test(c.standardGate) ? 'Fail' : 'Pass'}</span>${calc ? ` · ${Math.round(s.share * 100)}%` : ''}</td>
+            <td><span class="pill st-${stage(c.score)}">${f2(c.score)}</span></td></tr>`;
+        }).join('')}
+      </tbody></table></div>
+
+      <div class="section-head"><h2>Lowest items</h2><p>These are the items with a score below 2. Select a code to see the full evidence in the scorecard.</p></div>
+      <div class="card">${evidence(Object.values(allItems).filter((it) => it.score < 2).sort((x, y) => x.score - y.score || PW[y.priority] - PW[x.priority]).map((it) => it.code))}</div>
 
       <div class="section-head"><h2>Score by area</h2><p>The solid bar is the score now. The light bar is the score after the improvement. Area scores do not use the gates. Select an area to open it on the map.</p></div>
       <div class="card rank">
@@ -277,6 +365,11 @@
       <div class="section-head"><h2>Destination tier</h2><p>A tier needs a minimum score and a minimum share of island businesses that take part.</p></div>
       <div class="card table-scroll"><table><thead><tr><th>Tier</th><th>Minimum score</th><th>Participation necessary</th><th>Status</th></tr></thead><tbody>
         ${SC.tiers.map((t, i) => `<tr class="${t.met ? 'met' : ''}"><td><span class="chip st-${i}">${esc(t.tier)}</span></td><td class="num">${t.min.toFixed(1)}</td><td>${esc(t.req)}</td><td>${t.met ? 'Achieved' : 'Not yet'}</td></tr>`).join('')}
+      </tbody></table></div>
+
+      <div class="section-head"><h2>Tier inputs</h2></div>
+      <div class="card table-scroll"><table><thead><tr><th>Input</th><th>Value</th><th>Share</th><th>Source or note</th></tr></thead><tbody>
+        ${SC.tierInputs.map((t) => `<tr><td>${esc(t.input)}</td><td class="num">${t.value}</td><td class="num">${t.share == null ? '' : Math.round(t.share * 100) + '%'}</td><td>${esc(t.note)}</td></tr>`).join('')}
       </tbody></table></div>
 
       <div class="section-head"><h2>UN Sustainable Development Goals</h2><p>Each item connects to one goal. The number is the average score of the connected items.</p></div>
@@ -336,7 +429,7 @@
   }
 
   /* ---------- Shell ---------- */
-  const TABS = ['map', 'scorecard', 'score', 'brani'];
+  const TABS = ['map', 'scorecard', 'score', 'brani', 'sources'];
   function route() {
     const id = TABS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'map';
     TABS.forEach((t) => { document.getElementById(t).hidden = t !== id; });
@@ -355,7 +448,7 @@
     else if (t.dataset.area) { location.hash = '#map'; setTimeout(() => selectArea(t.dataset.area, true), 80); }
   });
 
-  renderMap(); renderScorecard(); renderScore(); renderBrani();
+  renderMap(); renderScorecard(); renderScore(); renderBrani(); renderSources();
   $('#credits').innerHTML = Object.values(CREDITS).map((c) =>
     `<li><a href="${esc(c.page)}" target="_blank" rel="noopener">${esc(c.title)}</a> · ${esc(c.author)} · ${esc(c.license)}</li>`).join('');
   $('#site-url').textContent = location.origin + location.pathname;

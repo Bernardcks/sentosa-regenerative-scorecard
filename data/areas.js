@@ -299,34 +299,3 @@ window.BRANI = {
     }
   ]
 };
-
-window.INSIGHTS = [
-  {
-    title: 'Sentosa obeys the standard. It does not yet restore.',
-    body: 'The final score is 1.46 of 5. This is the Conventional stage. Of 77 items, 47 are at the GSTC compliant level and none is at the Regenerative level.'
-  },
-  {
-    title: 'Two gates keep the score low.',
-    body: 'A category cannot score more than 1 if a Core item is below level 2. Stakeholder Engagement and Baseline Sustainability fail this gate. Without the gates, the score is 2.01.'
-  },
-  {
-    title: 'Waste is the one Core failure in the environment category.',
-    body: 'The island diverts 15% of its waste. Singapore diverts 52%. If this one item reaches level 2, the gate for Baseline Sustainability opens.'
-  },
-  {
-    title: 'People are the weakest part.',
-    body: 'Public opinion is negative: 10% support the plans and 46% do not. Only 0.3% of exhibition guests made a pledge. Heritage communities are at the lowest engagement level.'
-  },
-  {
-    title: 'Clean energy and honest claims are far behind.',
-    body: 'About 2% of electricity is from renewable sources. The GSTC minimum is 10%. About 60% of the claimed reductions rely on carbon credits.'
-  },
-  {
-    title: 'The strengths are real.',
-    body: 'All hotel rooms have a certificate. The Sentosa Carbon Neutral Network covers about 95% of the carbon footprint. Public transport on the island is electric.'
-  },
-  {
-    title: 'Leases are the strongest tool.',
-    body: 'Brani and RWS 2.0 add most of the new floor area. If SDC writes measured conditions into each lease and bid, the largest partners must follow.'
-  }
-];

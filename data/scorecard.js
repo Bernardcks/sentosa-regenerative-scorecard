@@ -34,7 +34,8 @@ window.SCORECARD = {
      "kpi": "% of senior leaders with regenerative KPIs in their performance scorecards",
      "sdg": 16,
      "ref": "GSTC A1; Biosphere governance",
-     "source": "Assumption: about 25% (basis: sustainability KPIs sit with the Sustainability Office; board changes June 2026)"
+     "source": "Assumption: about 25% (basis: sustainability KPIs sit with the Sustainability Office; board changes June 2026)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 100% or more"
     },
     {
      "name": "SDC staff",
@@ -58,7 +59,8 @@ window.SCORECARD = {
      "kpi": "% of staff taking part in at least one regeneration or community programme in the year",
      "sdg": 4,
      "ref": "GSTC A12 (culture); Biosphere SDG 4",
-     "source": "Assumption: about 25% (basis: no participation data published)"
+     "source": "Assumption: about 25% (basis: no participation data published)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 90% or more"
     },
     {
      "name": "Subsidiaries (Sentosa Cove Resort Management, Sentosa Golf Club, Mount Faber Leisure Group)",
@@ -82,7 +84,8 @@ window.SCORECARD = {
      "kpi": "% of subsidiaries' claimed emissions reductions delivered by real cuts, not offsets",
      "sdg": 13,
      "ref": "GSTC D10; Biosphere SDG 13",
-     "source": "Assumption: about 30% (basis: Golf Club neutrality mostly via offsets)"
+     "source": "Assumption: about 30% (basis: Golf Club neutrality mostly via offsets)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more"
     },
     {
      "name": "METI and STB (policy and tourism)",
@@ -106,7 +109,8 @@ window.SCORECARD = {
      "kpi": "% of master-plan KPIs agreed with government that are regenerative (nature, community, culture), not only growth",
      "sdg": 17,
      "ref": "GSTC A2; Biosphere SDG 17",
-     "source": "Team: master plan sets a number only for visitors; about 5% of KPIs regenerative"
+     "source": "Team: master plan sets a number only for visitors; about 5% of KPIs regenerative",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 50% or more\n5: 75% or more"
     },
     {
      "name": "URA, LTA and BCA (planning, transport, buildings)",
@@ -130,7 +134,8 @@ window.SCORECARD = {
      "kpi": "% of Greater Sentosa pipeline projects with a joint regenerative design review with agencies",
      "sdg": 11,
      "ref": "GSTC A9",
-     "source": "Assumption: about 25%"
+     "source": "Assumption: about 25%",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 100% or more"
     },
     {
      "name": "NParks, NEA, PUB and MPA (nature, environment, water, sea)",
@@ -154,7 +159,8 @@ window.SCORECARD = {
      "kpi": "% of nature and coastal projects co-delivered or co-monitored with agencies",
      "sdg": 15,
      "ref": "GSTC D1",
-     "source": "Assumption: about 30% (basis: NParks work on native planting; NEA water monitoring)"
+     "source": "Assumption: about 30% (basis: NParks work on native planting; NEA water monitoring)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 90% or more"
     },
     {
      "name": "Resorts World Sentosa (Genting Singapore)",
@@ -178,7 +184,8 @@ window.SCORECARD = {
      "kpi": "% of RWS's island footprint covered by joint, verified reduction and regeneration targets with SDC",
      "sdg": 17,
      "ref": "GSTC A4; Biosphere SDG 17",
-     "source": "Assumption: about 50% (basis: RWS in SCNN; GSTC-D and GSTC-H certified, renewed 2025)"
+     "source": "Assumption: about 50% (basis: RWS in SCNN; GSTC-D and GSTC-H certified, renewed 2025)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 100% or more"
     },
     {
      "name": "Hotels (about 19 hotels, 4,200 rooms)",
@@ -202,7 +209,8 @@ window.SCORECARD = {
      "kpi": "% of hotel rooms certified to a GSTC-recognised standard and reporting KPIs to SDC yearly",
      "sdg": 12,
      "ref": "GSTC A4; Biosphere certified companies",
-     "source": "Public: all hotel rooms certified by 2025 (SDC; TTG Asia 2024)"
+     "source": "Public: all hotel rooms certified by 2025 (SDC; TTG Asia 2024)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 95% or more"
     },
     {
      "name": "Attractions, F&B and retail operators (about 200 businesses)",
@@ -226,7 +234,8 @@ window.SCORECARD = {
      "kpi": "% of island businesses that are SCNN members (committed, ladder level 2+)",
      "sdg": 13,
      "ref": "GSTC A4; Biosphere Responsible Manifesto",
-     "source": "Public: 34 SCNN members of about 200 businesses (SDC deck, Aug 2026)"
+     "source": "Public: 34 SCNN members of about 200 businesses (SDC deck, Aug 2026)",
+     "tiers": "0: no data\n1: below 15%\n2: 15% or more\n3: 40% or more\n4: 70% or more\n5: 90% or more"
     },
     {
      "name": "Sentosa Carbon Neutral Network (as a body)",
@@ -250,7 +259,8 @@ window.SCORECARD = {
      "kpi": "% of island carbon footprint covered by SCNN members",
      "sdg": 13,
      "ref": "GSTC A4, D10",
-     "source": "Public: about 95% of island carbon footprint (SDC deck, Aug 2026)"
+     "source": "Public: about 95% of island carbon footprint (SDC deck, Aug 2026)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 98% or more"
     },
     {
      "name": "Developers, investors and tenderers (Brani, RWS 2.0, new builds)",
@@ -274,7 +284,8 @@ window.SCORECARD = {
      "kpi": "% of developers and shortlisted bidders signing measured, performance-based regenerative lease terms",
      "sdg": 12,
      "ref": "GSTC A9; new criterion NC-09",
-     "source": "Assumption: about 10% (basis: green terms are reporting terms, not performance-based; Brani not yet tendered)"
+     "source": "Assumption: about 10% (basis: green terms are reporting terms, not performance-based; Brani not yet tendered)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 100% or more"
     },
     {
      "name": "Suppliers and contractors",
@@ -298,7 +309,8 @@ window.SCORECARD = {
      "kpi": "% of SDC procurement spend with suppliers holding sustainability certification or verified targets",
      "sdg": 12,
      "ref": "GSTC B3",
-     "source": "Assumption: about 20%"
+     "source": "Assumption: about 20%",
+     "tiers": "0: no data\n1: below 20%\n2: 20% or more\n3: 40% or more\n4: 60% or more\n5: 80% or more"
     },
     {
      "name": "Sentosa Cove residents and property owners",
@@ -322,7 +334,8 @@ window.SCORECARD = {
      "kpi": "% of residential properties sharing energy and water data with SDC",
      "sdg": 7,
      "ref": "GSTC A5",
-     "source": "Assumption: about 5% (basis: residential water excluded from SDC reporting)"
+     "source": "Assumption: about 5% (basis: residential water excluded from SDC reporting)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 30% or more\n4: 60% or more\n5: 80% or more"
     },
     {
      "name": "Singapore public (wider community)",
@@ -346,7 +359,8 @@ window.SCORECARD = {
      "kpi": "Net public sentiment (% supportive minus % sceptical or opposed)",
      "sdg": 16,
      "ref": "GSTC A5; Biosphere citizen participation",
-     "source": "Team sentiment analysis 2026: 10% supportive, 46% sceptical or opposed"
+     "source": "Team sentiment analysis 2026: 10% supportive, 46% sceptical or opposed",
+     "tiers": "0: no data\n1: below -10%\n2: -10% or more\n3: 0% or more\n4: 20% or more\n5: 40% or more"
     },
     {
      "name": "Nature and heritage NGOs and academia (Nature Society, WildSingapore, NUS, NTU)",
@@ -370,7 +384,8 @@ window.SCORECARD = {
      "kpi": "% of nature and heritage monitoring and restoration programmes co-run with NGOs or academic partners",
      "sdg": 17,
      "ref": "GSTC D1, D2; Biosphere academia",
-     "source": "Assumption: about 30% (basis: some NGO and academic partnerships; WildSingapore critical of master plan siting)"
+     "source": "Assumption: about 30% (basis: some NGO and academic partnerships; WildSingapore critical of master plan siting)",
+     "tiers": "0: no data\n1: below 20%\n2: 20% or more\n3: 40% or more\n4: 60% or more\n5: 80% or more"
     },
     {
      "name": "Workers and unions (island workforce, NTUC)",
@@ -394,7 +409,8 @@ window.SCORECARD = {
      "kpi": "% of island workers reached by union or employer engagement on the sustainability transition",
      "sdg": 8,
      "ref": "GSTC B2",
-     "source": "Assumption: about 20%"
+     "source": "Assumption: about 20%",
+     "tiers": "0: no data\n1: below 20%\n2: 20% or more\n3: 40% or more\n4: 60% or more\n5: 80% or more"
     },
     {
      "name": "Heritage communities (Pulau Brani and Blakang Mati descendants)",
@@ -418,7 +434,8 @@ window.SCORECARD = {
      "kpi": "% of heritage interpretation and Brani planning workshops co-designed with descendant communities",
      "sdg": 11,
      "ref": "GSTC C3, C5",
-     "source": "Assumption: about 5%"
+     "source": "Assumption: about 5%",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 50% or more\n5: 75% or more"
     },
     {
      "name": "Local visitors (Singapore residents)",
@@ -442,7 +459,8 @@ window.SCORECARD = {
      "kpi": "% of surveyed residents who know Sentosa's carbon and nature goals",
      "sdg": 12,
      "ref": "GSTC A6; Biosphere citizens",
-     "source": "Team survey 2026: 18% know the goals, 51% do not"
+     "source": "Team survey 2026: 18% know the goals, 51% do not",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 40% or more\n4: 60% or more\n5: 80% or more"
     },
     {
      "name": "International visitors",
@@ -466,7 +484,8 @@ window.SCORECARD = {
      "kpi": "% of visitors making a regenerative pledge, contribution or activity during their visit",
      "sdg": 12,
      "ref": "GSTC A6; brief net plus two",
-     "source": "Public: 3,600 pledges from 1.2 million exhibition guests (about 0.3%)"
+     "source": "Public: 3,600 pledges from 1.2 million exhibition guests (about 0.3%)",
+     "tiers": "0: no data\n1: below 1%\n2: 1% or more\n3: 5% or more\n4: 10% or more\n5: 20% or more"
     },
     {
      "name": "MICE and event organisers",
@@ -490,7 +509,8 @@ window.SCORECARD = {
      "kpi": "% of MICE events and weddings run to certified low-carbon, low-waste standards",
      "sdg": 12,
      "ref": "GSTC D9, D10",
-     "source": "Assumption: about 10% (basis: SDC carbon-neutral MICE guidelines 2022; take-up not published)"
+     "source": "Assumption: about 10% (basis: SDC carbon-neutral MICE guidelines 2022; take-up not published)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 30% or more\n4: 60% or more\n5: 80% or more"
     }
    ]
   },
@@ -524,6 +544,7 @@ window.SCORECARD = {
      "sdg": 16,
      "ref": "GSTC A1",
      "source": "Assumption: about 40% (basis: SDC Development Committee focus group on integrative planning reviews major projects; no regenerative assessment standard yet)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "SDC has a Sustainability Office and a Development Committee with three focus groups (GSTC talk, Nov 2024). Accountability for whole-island results exists but there is no stop-power test.",
      "benchmark": "Biosphere destination board (public, private and citizen seats); Papagayo shows what happens when a state landlord sets rules but no one owns results."
@@ -546,6 +567,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC A2",
      "source": "Assumption: about 65% (basis: 2021 roadmap targets met for hotel certification and largely for electric transport; solar and carbon neutrality pathway behind)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 70% or more\n4: 85% or more\n5: 95% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "Sustainable Sentosa roadmap (2021) has dated targets. Greater Sentosa Master Plan (2026) sets a number only for visitors; nature appears as principles.",
      "benchmark": "Greater Sentosa Master Plan sets a number only for visitors; Red Sea Global writes a net conservation gain target into its masterplan."
@@ -568,6 +590,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "GSTC A3",
      "source": "Assumption: about 35% of scorecard KPIs have current whole-island data (basis: island emissions and waste are published; water excludes homes; no visitor travel, habitat or per-visitor data found)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 70% or more\n4: 85% or more\n5: 95% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "Passed GSTC monitoring audit (2022). Gaps: no biodiversity trend, no visitor travel data, residential water excluded (brief).",
      "benchmark": "EarthCheck benchmarking (Baseline and Best Practice levels); Intrepid publishes its method and gaps."
@@ -590,6 +613,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "GSTC A3; EarthCheck Step 6; Green Destinations audit",
      "source": "Assumption: about 10% (basis: GSTC audit is the only external check found; no third-party assurance statement in SDC sustainability reports reviewed)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 90% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "GSTC-D certification audit in 2022; renewal status not publicly confirmed.",
      "benchmark": "Green Destinations independent audit every two years; KLM lost in court over unverified claims."
@@ -612,6 +636,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "GSTC A7",
      "source": "Assumption: about 50% (basis: Sentosa Golf Club 'carbon neutral' claim relies on offsets; no claims register found)",
+     "tiers": "0: no data\n1: below 60%\n2: 60% or more\n3: 80% or more\n4: 95% or more\n5: 100% or more",
      "qualitative": "1 Conventional",
      "evidence": "Golf Club's carbon-neutral label built mostly on credits; Carbon Market Watch complaint on the Peru project (brief). Survey: 51% unaware of goals.",
      "benchmark": "Intrepid's carbon labels on 800+ trips; KLM's CO2ZERO ruled misleading (2024); Sentosa Golf Club's offset-based 'carbon neutral' claim."
@@ -648,6 +673,7 @@ window.SCORECARD = {
      "sdg": 15,
      "ref": "GSTC D1",
      "source": "Public: 40 ha of 500 ha protected (SDC, 2021)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 20% or more\n4: 30% or more\n5: 40% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "8% protected is above Singapore's national share, but greenery covers over half the island and most is unprotected.",
      "benchmark": "Kunming-Montreal 30x30 target; Barangaroo turned port land into a 6 ha native headland park."
@@ -670,6 +696,7 @@ window.SCORECARD = {
      "sdg": 15,
      "ref": "New (GSTC D1)",
      "source": "No data: no public baseline for forest cover or species trends (brief)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 1% or more\n4: 3% or more\n5: 5% or more\n(improvement a year)",
      "qualitative": "1 Conventional",
      "evidence": "Native replanting (Light Red Meranti) but no habitat index; seagrass loss expected at Tanjong Rimau.",
      "benchmark": "Maya Bay live coral rose from about 8% to 20-30%; Red Sea Global's net conservation gain target."
@@ -692,6 +719,7 @@ window.SCORECARD = {
      "sdg": 14,
      "ref": "New (GSTC D1)",
      "source": "Assumption: about 5% (basis: turtle hatchery and small replanting; no reef restoration programme published)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 50% or more\n5: 75% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "85 hawksbill hatchlings released in 2021.",
      "benchmark": "Great Blue Wall; Maya Bay replanted 30,000 coral pieces (about half survived)."
@@ -714,6 +742,7 @@ window.SCORECARD = {
      "sdg": 15,
      "ref": "GSTC D2",
      "source": "Assumption: about 50% (basis: managed trails and nesting zones; no published impact limits)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "GSTC D2 audited.",
      "benchmark": "Hanauma Bay education and caps; monitored access with nature groups (stakeholder slide)."
@@ -736,6 +765,7 @@ window.SCORECARD = {
      "sdg": 14,
      "ref": "GSTC D3",
      "source": "Assumption: about 50% (basis: Singapore Oceanarium and attraction operators; audit coverage not published)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "GSTC D3 audited.",
      "benchmark": "Hawksbill turtle nesting on Sentosa (85 hatchlings released in 2021)."
@@ -758,6 +788,7 @@ window.SCORECARD = {
      "sdg": 15,
      "ref": "GSTC D4",
      "source": "Assumption: about 50% (basis: accreditation status of island animal attractions not published)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "GSTC D4 audited.",
      "benchmark": "Singapore Oceanarium (2025) and other animal attractions."
@@ -780,6 +811,7 @@ window.SCORECARD = {
      "sdg": 7,
      "ref": "GSTC D5",
      "source": "Assumption: index 100 to 98 (2% a year; basis: island emissions down 8% since baseline per SDC 2024, mostly electricity); SDC Group EUI 193.8 vs Singapore hotel median 255",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 3% or more\n4: 5% or more\n5: 8% or more\n(improvement a year)",
      "qualitative": "3 Sustainable",
      "evidence": "SDC Group is 24% below the Singapore hotel median; RWS carbon intensity down 24% (2025).",
      "benchmark": "RWS cut carbon intensity 28% since 2015; Bullitt Center net positive energy."
@@ -802,6 +834,7 @@ window.SCORECARD = {
      "sdg": 7,
      "ref": "GSTC D5",
      "source": "Team estimate: about 2% (5.2 MWp solar x ~1,200 kWh/kWp = ~6 GWh, against ~395 GWh implied by 162 ktCO2e at 0.41 kg/kWh)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 20% or more\n4: 35% or more\n5: 50% or more",
      "qualitative": "1 Conventional",
      "evidence": "Well below GSTC's 10% renewable minimum where applicable; SDC's own baseline puts solar at a 10% decarbonisation opportunity.",
      "benchmark": "RWS up to 3.8 GWh solar a year; ONE15 Marina 224,278 kWh solar; Red Sea Global runs on renewables."
@@ -824,6 +857,7 @@ window.SCORECARD = {
      "sdg": 6,
      "ref": "GSTC D6",
      "source": "Assumption: index 100 to 99 (1% a year; basis: no island trend published; RWS 54% alternative water)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 2% or more\n4: 4% or more\n5: 6% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "SDC Group WEI 320.8 L/person/day; reporting excludes condominiums and landed homes.",
      "benchmark": "Sentosa Golf Club irrigates only with captured rainwater; RWS 54% alternative water."
@@ -846,6 +880,7 @@ window.SCORECARD = {
      "sdg": 14,
      "ref": "GSTC D7",
      "source": "Assumption: about 95% (basis: Sentosa beaches usually rated good by NEA; 2024 oil spill)",
+     "tiers": "0: no data\n1: below 80%\n2: 80% or more\n3: 90% or more\n4: 95% or more\n5: 100% or more",
      "qualitative": "3 Sustainable",
      "evidence": "Oil spill June 2024.",
      "benchmark": "June 2024 oil spill."
@@ -868,6 +903,7 @@ window.SCORECARD = {
      "sdg": 6,
      "ref": "GSTC D8",
      "source": "Assumption: about 35% (basis: RWS 54% alternative water; golf courses irrigated only with rainwater)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 40% or more\n5: 60% or more",
      "qualitative": "3 Sustainable",
      "evidence": "Strong at RWS and golf; island-wide share unknown.",
      "benchmark": "ONE15 Marina keeps 32,900 litres of boat sewage out of the sea each year; Barangaroo stormwater capture."
@@ -890,6 +926,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "GSTC D9",
      "source": "Public: 15% island-wide recycling, 2022 (SDC & WWF-Singapore, 2023)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 70% or more\n5: 85% or more",
      "qualitative": "1 Conventional",
      "evidence": "Island at 15% against Singapore's 52% (2025). SDC's own 46-48% covers only SDC-managed waste. About 22,800 t a year.",
      "benchmark": "Singapore overall recycling 52% (2025); RWS 19% (2024); Marina Bay Sands 42% (2025)."
@@ -912,6 +949,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "GSTC D9",
      "source": "Assumption: index 100 to 100 (no change; basis: no per-visitor waste trend published)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 3% or more\n4: 5% or more\n5: 8% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "Disposables guidelines bind only SCNN members.",
      "benchmark": "SDC disposables guidelines bind only SCNN members."
@@ -934,6 +972,7 @@ window.SCORECARD = {
      "sdg": 13,
      "ref": "GSTC D10 (revised)",
      "source": "Assumption: index 100 to 98 (2% real cut a year; basis: 8% island-wide cut reported Nov 2024 over about four years)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 100% or more\n4: 125% or more\n5: 150% or more\n(100% = on track)",
      "qualitative": "2 GSTC compliant",
      "evidence": "On-track test uses 2050 net zero; against SDC's own 2030 carbon-neutral goal the gap is far larger. SDC sees ~30% reduction potential from identified projects.",
      "benchmark": "Intrepid admitted its targets missed most emissions and reset them; net zero is the floor in our definition."
@@ -956,6 +995,7 @@ window.SCORECARD = {
      "sdg": 13,
      "ref": "GSTC D10",
      "source": "Assumption: index 100 to 97 (3% a year; basis: emissions down while visitors rose, per SDC 2024)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 3.5% or more\n4: 7% or more\n5: 10% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "Needs 3.5% a year just to hold the total flat while visitors double (brief).",
      "benchmark": "Brief: with twice the visitors, each visit's footprint must halve just to stand still."
@@ -978,6 +1018,7 @@ window.SCORECARD = {
      "sdg": 13,
      "ref": "GSTC D10",
      "source": "Public: 34 SCNN members of about 200 businesses (SDC deck Aug 2026; SDC & WWF 2023)",
+     "tiers": "0: no data\n1: above 75%\n2: 75% or less\n3: 50% or less\n4: 25% or less\n5: 5% or less",
      "qualitative": "3 Sustainable",
      "evidence": "By count most businesses lack a plan; by footprint SCNN covers about 95%, so qualitative level reflects strong footprint coverage.",
      "benchmark": "KC: 'You have 10 stakeholders... everyone else doesn't do it, what's the point?'"
@@ -1000,6 +1041,7 @@ window.SCORECARD = {
      "sdg": 13,
      "ref": "GSTC D10 (revised)",
      "source": "Assumption: about 60% (basis: Golf Club neutrality via 5,000 t offsets; SDC 'will not rule out' credits for 2030)",
+     "tiers": "0: no data\n1: above 50%\n2: 50% or less\n3: 25% or less\n4: 10% or less\n5: 0% or less",
      "qualitative": "1 Conventional",
      "evidence": "KLM CO2ZERO is the cautionary case.",
      "benchmark": "KLM CO2ZERO; Carbon Market Watch complaint on the Peru credits."
@@ -1022,6 +1064,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC D11",
      "source": "Assumption: about 55% (basis: on-island public transport electric: 14 e-buses, 10 e-trams, monorail, cable car; cars still enter, no visitor travel data)",
+     "tiers": "0: no data\n1: below 40%\n2: 40% or more\n3: 60% or more\n4: 75% or more\n5: 90% or more",
      "qualitative": "3 Sustainable",
      "evidence": "Intra-island fleet electrified (Tower Transit contract 2025); access by car remains.",
      "benchmark": "Hanauma Bay limits parking and access."
@@ -1044,6 +1087,7 @@ window.SCORECARD = {
      "sdg": 15,
      "ref": "GSTC D12",
      "source": "Assumption: about 80% (basis: no monitoring published; turtle nesting beaches)",
+     "tiers": "0: no data\n1: below 70%\n2: 70% or more\n3: 85% or more\n4: 95% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "Planned 88 m light sculpture and events add pressure.",
      "benchmark": "Planned 88 m light sculpture and Sensorium events; hawksbill nesting."
@@ -1066,6 +1110,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "New (GSTC D9)",
      "source": "Assumption: about 5% (basis: food waste digester pilot at Sentosa Golf Club only)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 30% or more\n4: 50% or more\n5: 75% or more",
      "qualitative": "1 Conventional",
      "evidence": "Central waste management is a 3% decarbonisation opportunity (SDC 2024).",
      "benchmark": "Brief: local produce from spice gardens and farmers; industrial symbiosis."
@@ -1088,6 +1133,7 @@ window.SCORECARD = {
      "sdg": 9,
      "ref": "New",
      "source": "Assumption: about 5% (basis: embodied carbon not reported for island projects)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 20% or more\n4: 30% or more\n5: 40% or more",
      "qualitative": "1 Conventional",
      "evidence": "Not measured.",
      "benchmark": "Saisei Kenchiku reuse of existing structures; Brani port land."
@@ -1124,6 +1170,7 @@ window.SCORECARD = {
      "sdg": 8,
      "ref": "GSTC B1",
      "source": "Assumption: index 100 to 101 (1% real growth; basis: national receipts growing; RWS FY2025 profit fell 33%)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 2% or more\n4: 4% or more\n5: 6% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "Sentosa-level spend per visitor not published.",
      "benchmark": "Singapore tourism receipts S$31-32.5bn forecast (2026)."
@@ -1146,6 +1193,7 @@ window.SCORECARD = {
      "sdg": 8,
      "ref": "GSTC B2",
      "source": "Assumption: about 75% (basis: Progressive Wage Model covers cleaning, security, landscaping, F&B and retail roles)",
+     "tiers": "0: no data\n1: below 60%\n2: 60% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "3 Sustainable",
      "evidence": "Strong national labour framework.",
      "benchmark": "NTUC listed as a community stakeholder; Playa Viva hospitality internships."
@@ -1168,6 +1216,7 @@ window.SCORECARD = {
      "sdg": 4,
      "ref": "GSTC B2",
      "source": "Assumption: index 100 to 100 (basis: SDC 24.3 hours per employee; trend not published)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 3% or more\n4: 6% or more\n5: 10% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "Island-wide training data not collected.",
      "benchmark": "Playa Viva education fund and internships."
@@ -1190,6 +1239,7 @@ window.SCORECARD = {
      "sdg": 8,
      "ref": "GSTC B3",
      "source": "Assumption: about 30% (basis: Singapore SME supply for F&B and services; no local-produce requirement)",
+     "tiers": "0: no data\n1: below 20%\n2: 20% or more\n3: 30% or more\n4: 40% or more\n5: 50% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "Brief: local produce idea not yet adopted.",
      "benchmark": "Brief: require local produce from spice gardens and local farmers."
@@ -1212,6 +1262,7 @@ window.SCORECARD = {
      "sdg": 10,
      "ref": "GSTC B4",
      "source": "Assumption: about 15% (basis: SDC community programmes exist; take-up by group not published)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 40% or more\n5: 60% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "",
      "benchmark": "NTUC Downtown East as a local model for affordable leisure."
@@ -1234,6 +1285,7 @@ window.SCORECARD = {
      "sdg": 5,
      "ref": "GSTC B5",
      "source": "Assumption: about 90% (basis: Singapore labour and anti-discrimination enforcement; Tripartite Standards)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "3 Sustainable",
      "evidence": "",
      "benchmark": "Biosphere SDG 5 and 8 chapters."
@@ -1256,6 +1308,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC B6",
      "source": "Assumption: about 55% (basis: Siloso, Palawan and Tanjong beaches free; Sentosa Cove, golf and resort frontage private)",
+     "tiers": "0: no data\n1: below 60%\n2: 60% or more\n3: 75% or more\n4: 85% or more\n5: 95% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "",
      "benchmark": "Barangaroo Reserve as free public space; Gardens by the Bay grew local visits while Sentosa lost them."
@@ -1278,6 +1331,7 @@ window.SCORECARD = {
      "sdg": 3,
      "ref": "GSTC B7",
      "source": "Assumption: index 100 to 100 (basis: no incident trend published)",
+     "tiers": "0: no data\n1: below 0%\n2: 0% or more\n3: 5% or more\n4: 10% or more\n5: 15% or more\n(improvement a year)",
      "qualitative": "2 GSTC compliant",
      "evidence": "RWS Plaza 'feels-like' 56C (2025): heat is the emerging risk.",
      "benchmark": ""
@@ -1300,6 +1354,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC B8",
      "source": "Assumption: about 70% (basis: newer facilities built to Singapore accessibility code)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 70% or more\n4: 85% or more\n5: 95% or more",
      "qualitative": "3 Sustainable",
      "evidence": "",
      "benchmark": ""
@@ -1322,6 +1377,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "New (GSTC B6, B8)",
      "source": "Public: about 20% local (SDC and AGBrief, 2026)",
+     "tiers": "0: no data\n1: below 20%\n2: 20% or more\n3: 25% or more\n4: 30% or more\n5: 35% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "Local visits fell from 7.5m to 4.2m (2014-2018) while Gardens by the Bay grew.",
      "benchmark": "Local visits fell from 7.5m to 4.2m (2014-2018); Brani vision: 'Singaporeans feel at home'."
@@ -1344,6 +1400,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC C1",
      "source": "Assumption: about 75% (basis: Fort Siloso conserved and in use; Brani heritage not yet documented)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "3 Sustainable",
      "evidence": "",
      "benchmark": "Saisei Kenchiku heritage revival; Te Puia sustains Maori arts and crafts."
@@ -1366,6 +1423,7 @@ window.SCORECARD = {
      "sdg": 16,
      "ref": "GSTC C2",
      "source": "Assumption: about 90% (basis: mostly commercial retail; low risk)",
+     "tiers": "0: no data\n1: below 80%\n2: 80% or more\n3: 90% or more\n4: 95% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "",
      "benchmark": ""
@@ -1388,6 +1446,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC C3",
      "source": "Assumption: about 5% (basis: Malay, Orang Laut and port heritage of Brani and Blakang Mati rarely told by its communities)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 40% or more\n5: 60% or more",
      "qualitative": "1 Conventional",
      "evidence": "",
      "benchmark": "Te Puia; Barangaroo wove Indigenous history into its design."
@@ -1410,6 +1469,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC C4",
      "source": "Assumption: about 70% (basis: Fort Siloso free entry)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 70% or more\n4: 85% or more\n5: 100% or more",
      "qualitative": "3 Sustainable",
      "evidence": "",
      "benchmark": ""
@@ -1432,6 +1492,7 @@ window.SCORECARD = {
      "sdg": 16,
      "ref": "GSTC C5",
      "source": "Assumption: about 50% (basis: little community IP in use)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "",
      "benchmark": ""
@@ -1454,6 +1515,7 @@ window.SCORECARD = {
      "sdg": 11,
      "ref": "GSTC C6",
      "source": "Assumption: about 50%",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "",
      "benchmark": ""
@@ -1476,6 +1538,7 @@ window.SCORECARD = {
      "sdg": 4,
      "ref": "GSTC C7",
      "source": "Team survey proxy: 18% know Sentosa's carbon and nature goals (2026)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 40% or more\n4: 60% or more\n5: 75% or more",
      "qualitative": "2 GSTC compliant",
      "evidence": "SDC's own survey reports awareness up 25% (FY2023/24), from a low base.",
      "benchmark": "Survey: 51% did not know Sentosa has carbon neutral and nature goals."
@@ -1498,6 +1561,7 @@ window.SCORECARD = {
      "sdg": 12,
      "ref": "New",
      "source": "Public/Team: no post-visit follow-up found",
+     "tiers": "0: no data\n1: below 2%\n2: 2% or more\n3: 5% or more\n4: 10% or more\n5: 20% or more",
      "qualitative": "1 Conventional",
      "evidence": "Pledges (3,600 of 1.2m) were not followed up.",
      "benchmark": "Hughes & Packer: post-visit follow-up raises action; about 10% made lasting changes."
@@ -1520,6 +1584,7 @@ window.SCORECARD = {
      "sdg": 10,
      "ref": "New",
      "source": "Public/Team: no community benefit agreements found",
+     "tiers": "0: no data\n1: below 0.5%\n2: 0.5% or more\n3: 1% or more\n4: 2% or more\n5: 3% or more",
      "qualitative": "1 Conventional",
      "evidence": "",
      "benchmark": "Playa Viva; Great Blue Wall benefits to local communities."
