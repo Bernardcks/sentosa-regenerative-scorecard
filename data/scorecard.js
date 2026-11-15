@@ -640,6 +640,282 @@ window.SCORECARD = {
      "qualitative": "1 Conventional",
      "evidence": "Golf Club's carbon-neutral label built mostly on credits; Carbon Market Watch complaint on the Peru project (brief). Survey: 51% unaware of goals.",
      "benchmark": "Intrepid's carbon labels on 800+ trips; KLM's CO2ZERO ruled misleading (2024); Sentosa Golf Club's offset-based 'carbon neutral' claim."
+    },
+    {
+     "name": "Managing visitor volumes and activities",
+     "code": "NC-06",
+     "priority": "Core",
+     "score": 2.0,
+     "levels": [
+      "Visitor growth is the goal; no limits at sensitive sites.",
+      "Visitor flows are monitored and managed at busy sites, as GSTC requires.",
+      "Every sensitive site (reefs, beaches, forest, turtle nesting) has a set limit, a booking or flow control and monitoring.",
+      "Limits are set from ecological monitoring and tightened when sites decline; some areas are rested to recover.",
+      "Visitor access is designed to fund and support recovery; doubling visitors comes with measured habitat gain."
+     ],
+     "metric": "60%",
+     "reed": "GSTC compliant",
+     "kpi": "% of peak days on which every sensitive site stayed within its set visitor limit",
+     "sdg": 15,
+     "ref": "GSTC A8",
+     "source": "Assumption: about 60% (basis: no published visitor limits at reefs, beaches or forest; managed nesting areas only)",
+     "tiers": "0: no data\n1: below 70%\n2: 70% or more\n3: 85% or more\n4: 95% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "GSTC-audited visitor management exists, but no hard limits while the master plan aims to double visitors. Risk of falling to level 1.",
+     "benchmark": "Maya Bay closed 2018-2022 and reopened with hourly caps; Hanauma Bay uses reservations and caps."
+    },
+    {
+     "name": "Regenerative approval gate for new projects",
+     "code": "NC-07",
+     "priority": "Core",
+     "score": 2.0,
+     "levels": [
+      "Projects are approved on commercial grounds; impacts are mitigated or offset afterwards.",
+      "Planning and development rules include sustainability and impact assessment, as GSTC requires.",
+      "Every new project must pass a pass-or-fail 'no compromise' test: no net loss of habitat, heritage or public access, and no offsets used to justify approval.",
+      "Projects must show a measured net gain for nature and community before approval.",
+      "Only projects that are net positive across nature, heritage and people proceed; designs are co-reviewed with community and NGOs."
+     ],
+     "metric": "0%",
+     "reed": "GSTC compliant",
+     "kpi": "% of new projects (by capital value) that passed the no-compromise test before approval",
+     "sdg": 11,
+     "ref": "GSTC A9 (revised)",
+     "source": "Assumption: 0% (basis: no pass-or-fail no-compromise test exists in SDC's approval process)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 80% or more\n4: 95% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Statutory planning and EIA meet GSTC A9. But Tanjong Rimau cliff works will cause some seagrass loss (SDC, 2026), and the hub sits near Serapong reefs.",
+     "benchmark": "Papagayo's loosened rules led to a court freeze (2026); Tanjong Rimau cliff works will cause some seagrass loss."
+    },
+    {
+     "name": "Baseline surveys before development",
+     "code": "NC-08",
+     "priority": "Core",
+     "score": 2.0,
+     "levels": [
+      "Sites are designed and built with no prior survey of nature or heritage.",
+      "Statutory environmental impact studies are done where required.",
+      "Every new site (including Brani when the port leaves in 2027) has an ecological and heritage baseline before design starts.",
+      "Baselines are repeated yearly, so gain can be proven; results are shared with NParks, NGOs and academics.",
+      "Baselines and restoration targets are set with communities and scientists and drive the design of each site."
+     ],
+     "metric": "50%",
+     "reed": "GSTC compliant",
+     "kpi": "% of new development land and shore area with a completed ecological and heritage baseline before design starts",
+     "sdg": 15,
+     "ref": "GSTC A9, D1",
+     "source": "Assumption: about 50% (basis: statutory surveys for major works; no public baseline for forest cover or species trends; Brani not yet surveyed)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "WildSingapore found wild reefs at Serapong (2026). Brani survey on port exit (2027) is our recommendation, not yet committed.",
+     "benchmark": "WildSingapore found wild reefs at Serapong (2026) near a planned hub; Saisei Kenchiku reads a place's memory before redesign."
+    },
+    {
+     "name": "Developer tenders, leases and value chain",
+     "code": "NC-09",
+     "priority": "Core",
+     "score": 2.0,
+     "levels": [
+      "Tenders and leases are awarded on price and commercial terms.",
+      "Green lease terms apply to some tenants (for example, the Green Terms Framework for SCNN members).",
+      "Every tender, lease and renewal carries binding, measured sustainability clauses with at least 30% of evaluation weight.",
+      "Variable rent and lease renewals are linked to verified regenerative outcomes.",
+      "Every part of the value chain (developers, operators, suppliers, events) is contracted to net-positive outcomes."
+     ],
+     "metric": "15%",
+     "reed": "GSTC compliant",
+     "kpi": "% of tenders, leases and renewals (by value) with binding, measured regenerative clauses",
+     "sdg": 12,
+     "ref": "New (GSTC A4, A9)",
+     "source": "Assumption: about 15% (basis: Green Terms Framework covers SCNN tenants' carbon reporting; not performance-based; RWS 2.0 and Brani outside it)",
+     "tiers": "0: no data\n1: below 25%\n2: 25% or more\n3: 50% or more\n4: 75% or more\n5: 95% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Green terms exist (level 2) but are reporting terms, not measured outcomes. S$17.8m variable rent not yet linked to outcomes.",
+     "benchmark": "Barangaroo made 'climate positive' a condition of the bidding process; SDC's S$17.8m variable rent is a ready lever."
+    },
+    {
+     "name": "Regenerative design standard for new builds",
+     "code": "NC-10",
+     "priority": "Standard",
+     "score": 2.0,
+     "levels": [
+      "New buildings meet the building code only.",
+      "New buildings meet Green Mark certification.",
+      "New and redeveloped buildings reach Green Mark Platinum (Super Low Energy) or better.",
+      "New buildings produce some of their own energy, capture water and add habitat on site.",
+      "New buildings are net positive in energy, water and biodiversity, measured after opening."
+     ],
+     "metric": "30%",
+     "reed": "GSTC compliant",
+     "kpi": "% of new and redeveloped floor area certified Green Mark Platinum (Super Low Energy) or better",
+     "sdg": 11,
+     "ref": "New (GSTC A9)",
+     "source": "Assumption: about 30% (basis: Green Mark is mandatory; RWS has 14 buildings GoldPlus or above, few Platinum Super Low Energy)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 80% or more\n4: 95% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Meets Singapore's Green Mark baseline; RWS 2.0 adds 50% floor area.",
+     "benchmark": "Bullitt Center produced 60% more energy than it used (2014), on measured performance; RWS 2.0 adds 50% more floor area."
+    },
+    {
+     "name": "Retrofit programme for existing assets",
+     "code": "NC-11",
+     "priority": "Standard",
+     "score": 2.0,
+     "levels": [
+      "Existing buildings are upgraded only when equipment fails.",
+      "An energy audit has been done for the main SDC-owned buildings.",
+      "A funded retrofit plan covers all major buildings, with each retrofit cutting energy intensity by at least 20%.",
+      "Retrofits also add on-site renewables, water reuse and habitat; tenants are incentivised to join.",
+      "Retrofitted assets give back more than they take, measured in energy, water and biodiversity."
+     ],
+     "metric": "10%",
+     "reed": "GSTC compliant",
+     "kpi": "% of existing building floor area retrofitted (or under a funded retrofit) that cuts energy intensity by 20% or more, cumulative",
+     "sdg": 9,
+     "ref": "New",
+     "source": "Assumption: about 10% (basis: energy efficiency identified as 9% decarbonisation opportunity in SDC's 2024 baseline; retrofit programme not published)",
+     "tiers": "0: no data\n1: below 10%\n2: 10% or more\n3: 25% or more\n4: 50% or more\n5: 75% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "SDC's decarbonisation baseline: energy efficiency 15 ktCO2e (9%) opportunity (GSTC talk, Nov 2024).",
+     "benchmark": "Red Sea Global as the infrastructure benchmark; Great Barrier Reef grants as a model for retrofit incentives."
+    },
+    {
+     "name": "Climate change adaptation",
+     "code": "NC-12",
+     "priority": "Core",
+     "score": 2.0,
+     "levels": [
+      "No island-wide climate risk assessment.",
+      "Climate risks are identified and an adaptation plan exists, as GSTC requires.",
+      "All critical assets and the 16 km shoreline have a site-level climate risk assessment and a funded plan.",
+      "Adaptation uses nature-based solutions (seagrass, mangroves, reef-friendly seawalls) that also restore habitat.",
+      "Adaptation works leave the coast more biodiverse and resilient than before, measured over time."
+     ],
+     "metric": "50%",
+     "reed": "GSTC compliant",
+     "kpi": "% of critical assets and shoreline (by length or value) with a completed climate risk assessment and funded adaptation plan",
+     "sdg": 13,
+     "ref": "GSTC A10",
+     "source": "Assumption: about 50% (basis: island Climate Risk Assessment in FY2022/23 report; site-specific sea-level study starts 2026)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Shoreline 16 km at risk; beaches eroding; adaptation not yet nature-based at scale.",
+     "benchmark": "Site-specific sea-level study starts 2026; eco-engineered seawalls show corals can colonise urban structures."
+    },
+    {
+     "name": "Risk and crisis management",
+     "code": "NC-13",
+     "priority": "Standard",
+     "score": 2.0,
+     "levels": [
+      "No tested island-wide crisis plan.",
+      "A risk and crisis plan exists and is communicated, as GSTC requires.",
+      "Every operator has a crisis plan, tested in a drill in the last 12 months, including oil spills and heat.",
+      "Recovery plans include restoring nature and supporting affected businesses and workers.",
+      "Crisis response is shared across partners and community and leaves sites better than before the incident."
+     ],
+     "metric": "50%",
+     "reed": "GSTC compliant",
+     "kpi": "% of island operators with a crisis plan tested in a drill in the last 12 months",
+     "sdg": 11,
+     "ref": "GSTC A11",
+     "source": "Assumption: about 50% (basis: 2024 oil spill response coordinated; no island-wide drill data)",
+     "tiers": "0: no data\n1: below 50%\n2: 50% or more\n3: 75% or more\n4: 90% or more\n5: 100% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Oil spill closed water activities June-August 2024.",
+     "benchmark": "June 2024 oil spill closed water activities until August; Ola Beach Club lost over half its customers."
+    },
+    {
+     "name": "Culture change in SDC and partners",
+     "code": "NC-14",
+     "priority": "Standard",
+     "score": 2.0,
+     "levels": [
+      "Sustainability is seen as one team's job.",
+      "Staff receive basic sustainability training.",
+      "Regenerative goals are in every leader's scorecard and in induction for SDC and partner staff.",
+      "Staff in every function propose and run regenerative projects; ideas are funded.",
+      "Regeneration is how the island works: staff and partners act without being told and teach others."
+     ],
+     "metric": "30%",
+     "reed": "GSTC compliant",
+     "kpi": "% of SDC and partner staff who can name Sentosa's regenerative goals and one action they own (annual pulse survey)",
+     "sdg": 4,
+     "ref": "New",
+     "source": "Assumption: about 30% (basis: no staff pulse survey published; GSTC training and Sustainability Office exist)",
+     "tiers": "0: no data\n1: below 30%\n2: 30% or more\n3: 50% or more\n4: 70% or more\n5: 85% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "SDC staff average 24.3 training hours; sustainability culture not measured.",
+     "benchmark": "Brief: culture change section; KC: 'everyone else doesn't do it, what's the point?'"
+    },
+    {
+     "name": "Ring-fenced regeneration fund",
+     "code": "NC-15",
+     "priority": "Standard",
+     "score": 1.0,
+     "levels": [
+      "No dedicated funding for regeneration.",
+      "Sustainability projects are funded case by case from operating budgets.",
+      "A ring-fenced fund receives a fixed share of tourism revenue and variable rent each year.",
+      "Partners co-fund it; spending is chosen with community and NGOs and results are published.",
+      "The fund is self-sustaining and pays for measured, lasting gains in nature and community."
+     ],
+     "metric": "0%",
+     "reed": "Conventional",
+     "kpi": "% of SDC tourism revenue (including variable rent) paid into a ring-fenced regeneration fund",
+     "sdg": 17,
+     "ref": "New",
+     "source": "Public/Team: no ring-fenced regeneration fund found",
+     "tiers": "0: no data\n1: below 0.5%\n2: 0.5% or more\n3: 1% or more\n4: 2% or more\n5: 3% or more",
+     "qualitative": "1 Conventional",
+     "evidence": "Variable rent and revenue are not ring-fenced for regeneration.",
+     "benchmark": "Great Blue Wall funds restoration from reef tourism and blue carbon; Playa Viva funds education from resort income."
+    },
+    {
+     "name": "Learning from case studies and peers",
+     "code": "NC-16",
+     "priority": "Supplementary",
+     "score": 2.0,
+     "levels": [
+      "No benchmarking against other destinations.",
+      "Occasional comparison with Singapore peers.",
+      "Yearly review of the 14 benchmark cases in the research brief; at least a third of practices adopted or piloted.",
+      "Half of benchmark practices adopted; Sentosa shares its own lessons with peers.",
+      "Sentosa is a case study others learn from; most benchmark practices are adopted and improved on."
+     ],
+     "metric": "21%",
+     "reed": "GSTC compliant",
+     "kpi": "% of the benchmark case-study practices adopted or piloted",
+     "sdg": 17,
+     "ref": "New",
+     "source": "Team: about 3 of 14 benchmark practices in place (GSTC certification, electric transport, green lease terms)",
+     "tiers": "0: no data\n1: below 15%\n2: 15% or more\n3: 30% or more\n4: 50% or more\n5: 70% or more",
+     "qualitative": "2 GSTC compliant",
+     "evidence": "Few of Hanauma, Maya Bay, Barangaroo or Intrepid practices adopted (caps, climate-positive tenders, honest labels).",
+     "benchmark": "Brief cases: Hanauma Bay, Red Sea Global, Playa Viva, Te Puia, Maya Bay, Papagayo, KLM, Intrepid, Great Barrier Reef, Barangaroo, Saisei Kenchiku, Great Blue Wall."
+    },
+    {
+     "name": "Living-lab pilots and innovation",
+     "code": "NC-17",
+     "priority": "Supplementary",
+     "score": 3.0,
+     "levels": [
+      "No pilots of new regenerative methods.",
+      "One-off pilots with no published results.",
+      "A yearly pilot budget; results published whether they work or not.",
+      "Successful pilots are scaled across the island with partners and universities.",
+      "Sentosa is a recognised test bed whose results change practice in Singapore and the region."
+     ],
+     "metric": "1%",
+     "reed": "Sustainable",
+     "kpi": "% of capital budget spent on pilots of regenerative methods with published results",
+     "sdg": 9,
+     "ref": "New",
+     "source": "Assumption: about 1% of capex (basis: food waste digester, autonomous shuttle, floating solar and waste-to-energy studies)",
+     "tiers": "0: no data\n1: below 1%\n2: 1% or more\n3: 2% or more\n4: 3% or more\n5: 5% or more",
+     "qualitative": "3 Sustainable",
+     "evidence": "Pilots exist with partners (GovInsider; MOT and ST Engineering shuttle 2024).",
+     "benchmark": "Brani as a living lab ('where play pays for nature'); NUS and NTU research partnerships."
     }
    ]
   },
@@ -1696,14 +1972,14 @@ window.SCORECARD = {
    "n": 7,
    "goal": "Affordable and clean energy",
    "linked": 3,
-   "avg": 1.7,
+   "avg": 1.67,
    "status": "Poor performance"
   },
   {
    "n": 8,
    "goal": "Decent work and economic growth",
    "linked": 4,
-   "avg": 2.1,
+   "avg": 2.12,
    "status": "Poor performance"
   },
   {
@@ -1724,35 +2000,35 @@ window.SCORECARD = {
    "n": 11,
    "goal": "Sustainable cities and communities",
    "linked": 14,
-   "avg": 2.1,
+   "avg": 2.14,
    "status": "Poor performance"
   },
   {
    "n": 12,
    "goal": "Responsible consumption and production",
    "linked": 14,
-   "avg": 1.7,
+   "avg": 1.68,
    "status": "Poor performance"
   },
   {
    "n": 13,
    "goal": "Climate action",
    "linked": 8,
-   "avg": 2.1,
+   "avg": 2.06,
    "status": "Poor performance"
   },
   {
    "n": 14,
    "goal": "Life below water",
    "linked": 3,
-   "avg": 2.3,
+   "avg": 2.33,
    "status": "Poor performance"
   },
   {
    "n": 15,
    "goal": "Life on land",
    "linked": 8,
-   "avg": 1.9,
+   "avg": 1.94,
    "status": "Poor performance"
   },
   {
@@ -1792,7 +2068,7 @@ window.SCORECARD = {
   {
    "input": "Businesses at ladder level 3 or above (certified)",
    "value": 25.0,
-   "share": 0.13,
+   "share": 0.12,
    "note": "Assumption: 19 certified hotels plus RWS and a few certified attractions"
   },
   {

@@ -26,7 +26,7 @@ window.FINDINGS = [
   {
     title: 'Four Core stakeholders are below the Committed level',
     why: 'Government policy owners, developers, local visitors and international visitors are below level 2. This limits Stakeholder Engagement to 1.00. The category is 35% of the final score, thus this is the largest loss.',
-    codes: ['SE-04', 'SE-11', 'SE-18', 'SE-19'],
+    codes: ['SE-04', 'SE-11', 'SE-18', 'SE-19', 'NC-09'],
     actions: [
       'Agree nature and community targets for the master plan with METI and STB. Level 2 needs 10% of master plan KPIs to be regenerative.',
       'Write measured conditions into the Brani and RWS 2.0 bids. Level 2 needs 25% of developers to sign them.',

@@ -71,7 +71,7 @@ window.AREAS = [
       'The totals must decrease while the floor area increases.',
       'Make these targets a condition of the expansion and publish the results each year.'
     ],
-    links: ['SE-07', 'SE-11', 'BS-14', 'NC-02']
+    links: ['SE-07', 'SE-11', 'NC-09', 'BS-14']
   },
   {
     id: 'cove', name: 'Sentosa Cove', kind: 'Homes and marina', x: 14.8, y: 46.6,
@@ -136,7 +136,7 @@ window.AREAS = [
       'Protect the seagrass at Tanjong Rimau.',
       'Let visitors go on monitored shore walks with nature groups.'
     ],
-    links: ['BS-19', 'BS-03', 'SE-20', 'SE-15']
+    links: ['BS-19', 'NC-06', 'BS-03', 'SE-20']
   },
   {
     id: 'imbiah', name: 'Imbiah Lookout and nature area', kind: 'Forest hill and attractions', x: 62.7, y: 47.2,
@@ -295,7 +295,7 @@ window.BRANI = {
         'The Additional KPIs score is lower because the story comes from the Pacific and ticket prices can keep local families out.'
       ],
       risk: 'This is a proposal by our team. Disney has made no commitment. The conditions apply to any anchor tenant.',
-      links: ['SE-11', 'NC-02', 'BS-08', 'BS-12', 'BS-17', 'AK-19', 'AK-13']
+      links: ['SE-11', 'NC-09', 'NC-07', 'BS-08', 'BS-12', 'BS-17', 'AK-19', 'AK-13']
     }
   ]
 };

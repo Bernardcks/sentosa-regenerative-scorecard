@@ -43,9 +43,7 @@
     if (coreFail.length) score = Math.min(score, 1);
     return { base, score, coreFail, share };
   }
-  // The No Compromise export is not complete, thus we keep the workbook score for it.
-  const simFinal = (over) => SC.categories.reduce((sum, c) =>
-    sum + (c.id === 'nc' ? c.score : simCategory(c, over).score) * c.weight, 0);
+  const simFinal = (over) => SC.categories.reduce((sum, c) => sum + simCategory(c, over).score * c.weight, 0);
   const catOf = (code) => SC.categories.find((c) => c.items.some((it) => it.code === code));
 
   function nextLevel(it) {
@@ -198,7 +196,6 @@
   }
 
   function renderScorecard() {
-    const nc = SC.categories.find((c) => c.id === 'nc');
     $('#scorecard').innerHTML = `
       <h1>The Scorecard</h1>
       <p class="lead">The scorecard measures how far Greater Sentosa is from a regenerative destination. It has four categories and ${SC.final.assessed.split(' ')[0]} items. Each item gets a score from 0 to 5.</p>
@@ -218,9 +215,8 @@
       ${SC.categories.map((c, i) => `
         <details class="cat st-${stage(c.score)}" id="cat-${c.id}">
           <summary><span class="num">${f2(c.score)}</span>
-            <span><strong>${i + 1}. ${c.name}</strong> <small>${Math.round(c.weight * 10000) / 100}% of the final score · ${c.items.length} items shown · ${c.reed}</small></span></summary>
-          <p class="cat-note">Score before gates: ${f2(c.base)}. Core gate: ${esc(c.coreGate)}. Standard gate: ${esc(c.standardGate)}.
-            ${c.id === 'nc' ? ` This page shows ${nc.items.length} of the 17 items in this category. The full list is in the team workbook.` : ''}</p>
+            <span><strong>${i + 1}. ${c.name}</strong> <small>${Math.round(c.weight * 10000) / 100}% of the final score · ${c.items.length} items · ${c.reed}</small></span></summary>
+          <p class="cat-note">Score before gates: ${f2(c.base)}. Core gate: ${esc(c.coreGate)}. Standard gate: ${esc(c.standardGate)}.</p>
           ${c.items.map((it) => itemHtml(it, c.kind)).join('')}
         </details>`).join('')}
 
@@ -257,7 +253,7 @@
     }).join('');
     const total = simFinal(all);
     return `${cards}<div class="card total-effect st-${stage(total)}">
-      <div><h3>If SDC does all of these</h3><p>All the items in findings 1 to 6 get to level 2. This is the minimum, not the target. No Compromise stays at its score from the workbook.</p></div>
+      <div><h3>If SDC does all of these</h3><p>All the items in findings 1 to 6 get to level 2. This is the minimum, not the target.</p></div>
       <div class="shift"><div class="st-${stage(fin)}"><small>Final score now</small><span class="num">${f2(fin)}</span><em>${STAGES[stage(fin)]}</em></div>
         <span class="arrow" aria-hidden="true">→</span>
         <div class="st-${stage(total)}"><small>After</small><span class="num">${f2(total)}</span><em>${STAGES[stage(total)]}</em></div></div>
@@ -340,7 +336,7 @@
       <div class="section-head"><h2>Gates</h2><p>A gate limits the category score. The table shows the items that close each gate.</p></div>
       <div class="card table-scroll"><table><thead><tr><th>Category</th><th>Score before gates</th><th>Core gate (each Core item at level 2 or above)</th><th>Standard gate (70% at level 2 or above)</th><th>Score</th></tr></thead><tbody>
         ${SC.categories.map((c) => {
-          const s = simCategory(c), calc = c.id !== 'nc';
+          const s = simCategory(c), calc = true;
           return `<tr><td><strong>${c.name}</strong></td><td class="num">${f2(c.base)}</td>
             <td>${calc && s.coreFail.length ? `<span class="gate fail">Fail</span> ${codes(s.coreFail.map((x) => x.code))}` : `<span class="gate ${/Fail/.test(c.coreGate) ? 'fail' : 'pass'}">${esc(c.coreGate)}</span>`}</td>
             <td><span class="gate ${/Fail/.test(c.standardGate) ? 'fail' : 'pass'}">${/Fail/.test(c.standardGate) ? 'Fail' : 'Pass'}</span>${calc ? ` · ${Math.round(s.share * 100)}%` : ''}</td>
