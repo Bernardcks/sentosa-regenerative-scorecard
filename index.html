@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greater Sentosa Regenerative Scorecard</title>
+  <meta name="description" content="A student team baseline assessment of Greater Sentosa: island map, scorecard, estimated score and ideas for Pulau Brani.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="#map">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Greater Sentosa Regenerative Scorecard</strong>
+          <small>Team baseline assessment · November 2026</small>
+        </span>
+      </a>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#map" data-tab="map">Island Map</a>
+        <a href="#scorecard" data-tab="scorecard">Scorecard</a>
+        <a href="#score" data-tab="score">Sentosa Score</a>
+        <a href="#brani" data-tab="brani">Brani Island</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="map" class="tab" hidden></section>
+    <section id="scorecard" class="tab" hidden></section>
+    <section id="score" class="tab" hidden></section>
+    <section id="brani" class="tab" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div class="qr">
+        <img src="assets/img/qr.png" alt="QR code that opens this page" width="132" height="132">
+        <div>
+          <strong>Open this page on your phone</strong>
+          <p id="site-url"></p>
+        </div>
+      </div>
+      <div class="fine">
+        <p>This is a student project. It is not a product of Sentosa Development Corporation. All scores are estimates by our team from public data and our research.</p>
+        <p>Island map © Sentosa Development Corporation. Photographs are from Wikimedia Commons.</p>
+        <details>
+          <summary>Photograph credits</summary>
+          <ul id="credits"></ul>
+        </details>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/scorecard.js"></script>
+  <script src="data/credits.js"></script>
+  <script src="data/areas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
